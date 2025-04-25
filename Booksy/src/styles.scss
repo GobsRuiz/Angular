@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+$firstColor: #6278F7;
+$secondColor: #2E2E2E;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.small-stroke{
+    position: relative;
+
+    &::after{
+        content: "";
+        width: 40px;
+        height: 3px;
+        display: block;
+        background-color: #6278F7;
+        margin: 0 auto;
+    }
+}
+
+.medium-stroke{
+    position: relative;
+
+    &::after{
+        content: "";
+        width: 80px;
+        height: 3px;
+        display: block;
+        background-color: #6278F7;
+        margin: 0 auto;
+    }
+}
+
+.literaryGenre-1{
+    background-color: #E8FFFF !important;       
+
+    .small-stroke::after{
+        background-color: #82CFFA !important;
+    }
+}
+
+.literaryGenre-2{
+    background-color: #E9FFE3 !important;       
+
+    .small-stroke::after{
+        background-color: #A6D157 !important;
+    }
+}
+
+.literaryGenre-3{
+    background-color: #FFE3E3 !important;       
+
+    .small-stroke::after{
+        background-color: #E06B69 !important;
+    }
+}
+
+.literaryGenre-4{
+    background-color: #FFF0FA !important;       
+
+    .small-stroke::after{
+        background-color: #DB6EBF !important;
+    }
+}

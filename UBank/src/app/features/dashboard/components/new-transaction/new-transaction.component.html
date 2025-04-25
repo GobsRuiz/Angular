@@ -1,0 +1,25 @@
+<div class="border-1 border-black/10 rounded-lg py-3 px-4">
+    <h3 class="text-xl font-bold mb-2">
+        Nova Transação
+    </h3>
+    
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <input type="text" formControlName="description" placeholder="Descrição" class="border-1 rounded-md py-1 px-2">
+            @if (getErrorMessage('name')) {
+                <p class="block">{{ getErrorMessage('description') }}</p>
+            }
+        </div>
+
+        <div class="mb-3">
+            <input type="number" formControlName="value" placeholder="Descrição" class="border-1 rounded-md py-1 px-2">
+            @if (getErrorMessage('value')) {
+                <p class="block">{{ getErrorMessage('value') }}</p>
+            }
+        </div>
+
+        <button class="w-full block text-white font-medium bg-green-500 disabled:bg-gray-500 rounded-md py-1" >
+            Enviar
+        </button>
+    </form>
+</div>

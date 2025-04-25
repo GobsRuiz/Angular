@@ -1,0 +1,26 @@
+<section class="movies" style="max-width: 1200px; margin: 0 auto; box-sizing: border-box;">
+    
+    @for(list of movies; track $index){
+        <div class="movies__upComing" style="margin-bottom: 60px;">
+            <h3 style="color: #fff; font-size: 16px;">
+                {{ list.date }}
+            </h3>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 30px;">
+                @for(movie of list.list; track movie.title){
+                    <div class="" style="width: 200px; height: 300px; position: relative;">
+                        <img 
+                            [src]="movie.image" alt=""
+                            style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; object-fit: cover;"
+                        >
+    
+                        <p>
+                            {{ movie.title }}
+                        </p>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+    @empty {}
+</section>

@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { ListBooksComponent } from "./components/list-books/list-books.component";
+import { HomeComponent } from "./features/home/home.component";
 
 @Component({
   selector: 'app-root',
   imports: [
-    ListBooksComponent
+    HomeComponent
 ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Booksy';
+  title = 'NightFlix';
 }

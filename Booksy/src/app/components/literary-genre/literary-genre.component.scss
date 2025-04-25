@@ -1,0 +1,28 @@
+.literaryGenre{
+    padding: 40px 0 45px 0;
+
+    &__title{
+        max-width: max-content;
+        text-align: center;
+        font-size: 26px;
+        padding-bottom: 10px;
+        margin: 0 auto 30px auto;
+    }
+
+    &__books{
+        max-width: 1100px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        margin: 0 auto;
+
+        &__book{
+            margin-right: 50px;
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}

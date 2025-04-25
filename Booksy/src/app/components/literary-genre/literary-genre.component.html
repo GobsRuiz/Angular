@@ -1,0 +1,16 @@
+<section class="literaryGenre" [class]="'literaryGenre-' + genre().id">
+    <h2 class="literaryGenre__title small-stroke">
+        {{ genre().name }}
+    </h2>
+
+    <div class="literaryGenre__books">
+        @for(book of books(); track book.title) {
+            <div class="literaryGenre__books__book">
+                <app-book [book]="book"></app-book>
+            </div>
+        }
+        @empty {
+            <p>Vazio</p>
+        }
+    </div>
+</section>

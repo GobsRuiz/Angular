@@ -1,0 +1,15 @@
+<section class="listBooks">
+    <h1 class="listBooks__title medium-stroke">
+        Minhas leituras
+    </h1>
+
+    @for(genreWithBook of genreWithBooks; track genreWithBook.genre.id){
+        <app-literary-genre
+            [genre]="genreWithBook.genre"
+            [books]="genreWithBook.books"
+        ></app-literary-genre>
+    } 
+    @empty {
+        <p>Nenhum gênero disponível.</p>
+    }
+</section>
